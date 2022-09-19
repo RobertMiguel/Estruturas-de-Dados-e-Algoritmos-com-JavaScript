@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soma</title>
+</head>
+<body>
+    <h1>Somando</h1>
+    <input type="button" value="Soma" onclick="somar()">
+    <section id="soma"></section>
+    <script>
+        function somar() {
+            let n1 = Number(window.prompt("Digite o primeiro número"));
+            let n2 = Number(window.prompt("Digite o segundo número"));
+            let soma = n1+n2;
+            let reslt = document.querySelector('section#soma');
+            reslt.innerHTML = `Soma é ${soma}`;
+        }
+    </script>
+</body>
+</html>

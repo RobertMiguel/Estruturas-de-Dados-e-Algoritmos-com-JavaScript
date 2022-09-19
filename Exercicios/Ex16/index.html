@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aniversario</title>
+</head>
+<body>
+    <h1>Aniversario</h1>
+    <input type="button" value="Clique" onclick="aniversario()">
+    <section id="resultado"></section>
+    <script>
+        function aniversario() {
+            let nascimento = Number(window.prompt("Digite o ano que você nasceu"));
+            let resultado = document.getElementById('resultado');
+            let data = new Date;
+            let ano = data.getFullYear();
+            let aniversario = ano - nascimento;
+            let proximo = ano + 1;
+            resultado.innerHTML = `Aniversario : ${aniversario}, próximo aniversario ${proximo}`;
+        }
+    </script>
+</body>
+</html>

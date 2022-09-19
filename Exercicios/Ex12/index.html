@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Par ou impar</title>
+</head>
+<body>
+    <h1>É PAR OU IMPAR</h1>
+    <input type="button" value="Clique aqui" onclick="parimpar()">
+    <section id="result"></section>
+    <script>
+        function parimpar() {
+        let result = document.querySelector('section#result');
+        let num = Number(window.prompt("Digite o número"));
+        let msg;
+        if(num %2 == 0){
+            msg = `<strong>PAR</strong>`;
+        }
+        else{
+            msg = `<strong>IMPAR</strong>`;
+        }
+        result.innerHTML = `O número é ${msg}`;
+        }
+
+    </script>
+</body>
+</html>

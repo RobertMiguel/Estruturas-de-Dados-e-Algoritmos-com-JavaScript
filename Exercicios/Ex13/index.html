@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qual é o maior</title>
+</head>
+<body>
+    <h1>Qual maior valor</h1>
+    <input type="button" value="Clique" onclick="mm()">
+    <section id="mm"></section>
+    <script>
+        function mm() {
+            let n1 = Number(window.prompt("Digite o primeiro número"));
+            let n2 = Number(window.prompt("Digite o segundo número"));
+            let reslt = document.querySelector('section#mm');
+            let msg;
+            if (n1 == n2) {
+                msg ='Os número são iguais';
+            }
+            else if(n1>n2){
+                msg = 'Número 1 é maior que número 2';
+            }
+            else if(n2<n1){
+                msg = 'Número 2 é maior que número 1';
+            }
+            reslt.innerHTML = `${msg}`;
+        }
+    </script>
+</body>
+</html>

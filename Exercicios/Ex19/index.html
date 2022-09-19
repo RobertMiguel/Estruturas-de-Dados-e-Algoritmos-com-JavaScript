@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body>
+    <h1>calcular</h1>
+    <input type="button" value="Calcular" onclick="calcular()">
+    <section id="resultado"></section>
+    <script>
+        function calcular() {
+            let resultado   = document.querySelector('section#resultado');
+            let n1 = Number(window.prompt("Digite o primeiro número:"));
+            let n2 = Number(window.prompt("Digite o segundo número"));
+            let op = Number(window.prompt(`Valores informados: ${n1} e ${n2}. \nO que vamos fazer? \n[1] Somar \n[2] Subtrair \n[3] Multiplicar \n[4] Dividir`));
+            resultado.innerHTML = `<p>Calculando</p>`;
+            switch (op) {
+                case 1:
+                    let soma = n1+n2;
+                    resultado.innerHTML = `<p>${soma}</p>`;
+                    break;
+            
+                case 2:
+                    let subtrair = n1-n2;
+                    resultado.innerHTML = `<p>${subtrair}</p>`;
+                    break;
+                case 3:
+                let multiplicar = n1*n2;
+                resultado.innerHTML = `<p>${multiplicar}</p>`;
+                break;
+                case 4:
+                    let dividir = n1/n2;
+                    resultado.innerHTML = `<p>${dividir.toLocaleString('pt-BR')}</p>`;
+            }
+        }
+    </script>
+</body>
+</html>

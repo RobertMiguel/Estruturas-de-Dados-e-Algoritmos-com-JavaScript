@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Vários cálculos em JS</h1>
+    <input type="button" value="Clique aqui" onclick="calcular()">
+    <hr>
+    <section id="id">
+
+    </section>
+    <script>
+        function calcular() {
+            let num = Number(window.prompt("Digite o número"));
+            let vlAbs = Math.abs(num);
+            let vlInt = Math.trunc(num);
+            let rzQ = Math.sqrt(num);
+            let rzC = Math.cbrt(num);
+            let vlQ = Math.pow(num,2);
+            let vlC = Math.pow(num,3);
+
+            let reslt = document.querySelector('section#id');
+            reslt.innerHTML += `<p>Valor absoluto : ${vlAbs}</p>`;
+            reslt.innerHTML += `<p>Valor inteiro : ${vlInt}</p>`;
+            reslt.innerHTML += `<p>quadrada de ${num}<sup>2</sup> é ${vlQ}</p>`;
+            reslt.innerHTML += `<p>cúbica de ${num}<sup>3</sup> é ${vlC}</p>`;
+            reslt.innerHTML += `<p>Raiz quadrada ${rzQ}</p>`;
+            reslt.innerHTML += `<p>Raiz cúbica ${rzC}</p>`;
+        }
+    </script>
+</body>
+</html>

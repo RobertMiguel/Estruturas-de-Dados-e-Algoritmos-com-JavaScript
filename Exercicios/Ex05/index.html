@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soma</title>
+</head>
+<body>
+    <h1>Soma</h1>
+    <section id="res">
+        <p>resultado</p>
+    </section>
+    <script>
+        let n1 = Number(window.prompt("Digite o primeiro número"));
+        let n2 = Number(window.prompt("Digite o segundo número"));
+        let soma = n1+n2;
+        let res = document.querySelector('section#res');
+        res.innerHTML = `<p>O resultado da soma é <strong>${soma}</strong</p>`;
+    </script>
+</body>
+</html>

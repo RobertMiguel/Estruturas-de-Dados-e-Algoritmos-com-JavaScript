@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estação</title>
+</head>
+<body>
+    <h1>Estação</h1>
+    <input type="button" value="Clique" onclick="estacao()">
+    <section id="res"></section>
+    <script>
+        function estacao() {
+            let res = document.querySelector('section#res');
+            let mes = window.prompt("Digite um mês que está");
+            let est;
+            switch (mes.toUpperCase()) {
+                case 'JANEIRO': case 'FEVEREIRO': case 'MARÇO':
+                    est = 'INVERNO';
+                    break;
+                case 'ABRIL': case 'MAIO': case 'JUNHO':
+                 est = 'PRIMAVERA';
+                    break;
+                case 'JULHO': case 'AGOSTO': case 'SETEMBRO':
+                    est = 'VERÃO'
+                    break;
+                case 'OUTUBRO': case 'NOVEMBRO': case 'DEZEMBRO':
+                    est = 'OUTONO'
+                    break;
+                default:
+                est = 'MÊS INDEFINIDO'
+            }
+            res.innerHTML = `Mês ${mes} está na estação ${est}`;
+        }
+    </script>
+</body>
+</html>

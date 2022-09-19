@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adivinhar</title>
+</head>
+<body onload="sortear()">
+    <h1>Tente Adivinhar</h1>
+    <input type="button" value="Clique" onclick="jogar()">
+    <section id="numero"></section>
+    <script>
+        let computador = 0;
+        let jogador = 0;
+        let result = document.querySelector('section#numero');
+        function sortear() {
+            let min = 1;
+            let max = 100;
+            let diferenca = max - min;
+            let aleatorio = Math.random();
+            computador = min + Math.trunc(diferenca*aleatorio);
+        }
+        function jogar() {
+            jogador = Number(window.prompt("Digite o número"));
+             if(jogador > computador){
+                result.innerHTML += `<p>O número é menor`;
+            }
+            else if(jogador < computador){
+                result.innerHTML += `<p>O número é maior</p>`;
+            }
+            else if(jogador == computador){
+                result.innerHTML += `<p>Você acertou o número era ${computador}</p>`;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data e hora</title>
+</head>
+<body>
+    <h1>Data e hora</h1>
+    <input type="button" value="Clique" onclick="sistema()">
+    <section id="sistema"></section>
+    <script>
+        function sistema() {
+            let result = document.getElementById('sistema');
+            let meses = new Array('Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'); 
+            let semana = new Array('Dom', 'Seg','Ter', 'Qua','Qui','Sex','Sab');
+            let agora = new Date;
+            let dia = agora.getDate();
+            let mes = agora.getMonth();
+            let ano = agora.getFullYear();
+            let sem = agora.getDay();
+            let hora = agora.getHours();
+            let segundo = agora.getSeconds();
+            let minutos = agora.getMinutes();
+            result.innerHTML = `<p>Dia : ${dia}</p>`;
+            result.innerHTML += `<p>Meses : ${mes}</p>`;
+            result.innerHTML += `<p>Ano : ${ano}</p>`;
+            result.innerHTML += `<p>Semana : ${sem}</p>`;
+            result.innerHTML += `<p>Hora : ${hora}</p>`;
+            result.innerHTML += `<p>Segundo : ${segundo}</p>`;
+            result.innerHTML += `<p>Minutos : ${minutos}</p>`;
+        }
+    </script>
+</body>
+</html>

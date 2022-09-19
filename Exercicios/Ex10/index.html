@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript externo</title>
+</head>
+<body>
+    <h1>JavaScript Externo</h1>
+   <input type="button" value="botao 1" onclick="btn1()">
+   <input type="button" value="botao 2" onclick="btn2()">
+   <input type="button" value="botao 3" onclick="btn3()">
+   <input type="button" value="botao 4" onclick="btn4()">
+   <section id="clique">
+
+   </section>
+   <script>
+    let clique = window.document.getElementById('clique');
+    function btn1() {
+        clique.innerHTML += `<p>btn1</p>`;
+    }
+    function btn2(){
+        clique.innerHTML += `<p>btn2</p>`;
+    }
+    function btn3() {
+        clique.innerHTML += `<p>btn3</p>`;
+    }
+    function btn4(){
+        clique.innerHTML += `<p>btn4</p>`;
+    }
+   </script>
+</body>
+</html>

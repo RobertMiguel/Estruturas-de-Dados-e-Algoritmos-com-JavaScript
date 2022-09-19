@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Média</title>
+</head>
+<body>
+    <h1>Calcular Média</h1>
+    <input type="button" value="Média" onclick="calcular()">
+    <section id="res">
+
+    </section>
+    <script>
+        function calcular(){
+            let nome = window.prompt('Digite o nome')
+            let n1 = Number(window.prompt("Digite a nota 1"));
+            let n2 = Number(window.prompt("Digite a nota 2"));
+            let media = (n1+n2)/2;
+            let res = document.querySelector('section#res');
+            res.innerHTML = `<p>O aluno ${nome} tirou ${media}</p>`;
+        }
+    </script>
+</body>
+</html>
