@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador</title>
+</head>
+<body>
+    <h1>Contador par</h1>
+    <input type="button" value="Clique" onclick="funcao()">
+    <section id="resultado"></section>
+    <script>
+        let resultado = document.querySelector('section#resultado')
+        function funcao() {
+            resultado.innerHTML = `<h2>Números pares de 1 a 10</h2>`
+            let x = 1
+            while(x<=10){
+                if(x%2==0){
+                    resultado.innerHTML += `<mark>${x}</mark>`;
+                }
+                x++
+            }
+        }
+    </script>
+</body>
+</html>

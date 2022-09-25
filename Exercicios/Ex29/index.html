@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fatorial</title>
+</head>
+<body>
+    <h1>Fatorial</h1>
+    <section id="entrada">
+        <form action="#" method="get">
+            <label for="fnumero">Número</label>
+            <input type="number" id="fnumero" max="21" min="1" placeholder="Número">
+            <input type="submit" value="Clique" formaction="javascript:fatorial()">
+        </form>
+    </section>
+    <section id="saida"></section>
+    <script>
+        let saida = document.getElementById('saida')
+        let numero = Number(document.getElementById('fnumero').value)
+        let c = numero
+        let fat = 1
+        function fatorial() {
+            while (c > 1) {
+                saida.innerHTML += `${c} x `
+                fat *= c
+                c--
+            }
+            saida.innerHTML += `1 = <strong>${fat.toLocaleString('pt-BR')}</strong>`
+        }
+    </script>
+</body>
+</html>

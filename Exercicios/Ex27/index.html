@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contagem inteligente</title>
+</head>
+<body>
+    <h1>Contagem "inteligente"</h1>
+    <p>Use qualquer valor nas caixas, simule contagens crescentes e regressivas. Use também valores negativos.</p>
+    <section id="entrada">
+        <form action="#" method="get">
+            <p>
+                <label for="fn1">Valor final: </label>
+                <input type="number" name="n1" id="fn1" placeholder="Início da contagem">
+            </p>
+            <p>
+                <label for="fn1">Valor final: </label>
+                <input type="number" name="n2" id="fn2" placeholder="Fim da contagem">
+            </p>
+            <p>
+                <input type="submit" value="Contar" formaction="javascript:contagem()">
+            </p>
+        </form>
+    </section>
+    <section id="saida">
+        <p>Preencha os dados acima e aperte o botão.</p>
+    </section>
+    <script>
+        function contagem() {
+            let saida = document.getElementById('saida')
+            let num1 = Number(document.getElementById('fn1').value)
+            let num2 = Number(document.getElementById('fn2').value)
+            let cont
+            if(num1<num2){
+                cont = num1
+                while(cont<=num2){
+                    saida.innerHTML += `${cont}`
+                    cont++
+                } 
+            }
+            else if(num2<num1){
+                cont = num1
+                while (cont>=num2) {
+                    saida.innerHTML += `${cont}`
+                    cont --
+                }
+            }
+            else{
+                saida.innerHTML = `<p>Eles são iguais</p>`
+            }
+
+}
+    </script>
+</body>
+</html>

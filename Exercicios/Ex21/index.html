@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contando de 1 até 10</title>
+</head>
+<body>
+    <h1>Contando de 1 até 10</h1>
+    <input type="button" value="Aperte" onclick="funcao()">
+    <section id="resultado"></section>
+    <script>
+        function funcao() {
+            let resultado = document.querySelector('section#resultado');
+            let x =1
+            while (x<=10) {
+                resultado.innerHTML += ` ${x} &#x1F449; `
+                x++
+            }
+            resultado.innerHTML += `&#x1F3C1;`
+        }
+    </script>
+</body>
+</html>
