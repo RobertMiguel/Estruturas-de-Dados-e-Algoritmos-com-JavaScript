@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hipotenusa</title>
+</head>
+<body>
+    <h1>Hipotenusa</h1>
+    <section id="entrada">
+        <form action="#" method="get">
+            <label for="cateto1">Primeiro cateto</label>
+            <input type="number" name="cateto1" id="cateto1">
+            <br>
+            <label for="cateto2">Segundo cateto</label>
+            <input type="number" name="cateto2" id="cateto2">
+            <br>
+            <input type="submit" value="Clique para calcular" formaction="javascript:hipotenusa()">
+        </form>
+    </section>
+    <section id="saida">
+        <p>Resultado da hipotenusa</p>
+    </section>
+    <script>
+        function hipotenusa() {
+            let saida = document.querySelector('section#saida')
+            let cateto1 = Number(document.getElementById('cateto1').value)
+            let cateto2 = Number(document.getElementById('cateto2').value)
+            let catetoQ = Math.pow(cateto1,2) + Math.pow(cateto2,2)
+            let hipotenusa = Math.sqrt(catetoQ)
+            saida.innerHTML = `${Math.trunc(hipotenusa)}`
+        }
+    </script>
+</body>
+</html>

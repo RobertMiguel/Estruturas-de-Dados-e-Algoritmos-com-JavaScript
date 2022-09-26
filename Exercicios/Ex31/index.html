@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMC</title>
+</head>
+<body>
+    <h1>IMC</h1>
+    <secton id="entrada">
+        <form action="#" method="get">
+            <label for="peso">Peso</label>
+            <input type="text" name="peso" id="peso"placeholder=Peso>
+            <br>
+            <label for="altura">Altura:</label>
+            <input type="text" name="altura" id="altura" placeholder="Altura">
+            <input type="submit" value="Calcular IMC" formaction="javascript:imc()">
+        </form>
+    </secton>
+    <section id="saida">
+        <p>IMC vai aparecer aqui ...</p>
+    </section>
+    <script>
+        let saida = document.querySelector('section#saida')
+        function imc() {
+            /*peso*altura²*/
+            let peso = Number(document.getElementById('peso').value)
+            let altura = Number(document.getElementById('altura').value) / 100
+            let imc = Math.trunc(peso/(altura*altura))
+            if(imc <= 17){
+                saida.innerHTML = `${imc.toLocaleString('pt-BR')} abaixo da média`
+            }
+            else if(imc >= 18 && imc <= 29){
+                saida.innerHTML = `${imc.toLocaleString('pt-BR')} na média`
+            }
+            else if(imc >= 30){
+                saida.innerHTML = `${imc.toLocaleString('pt-BR')} acima da média`
+            }
+        }
+    </script>
+</body>
+</html>

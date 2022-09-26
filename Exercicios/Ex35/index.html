@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantos anos</title>
+</head>
+<body>
+    <h1>Quantos anos</h1>
+    <section id="saida">
+        <p>Idade será exibida aqui</p>
+    </section>
+    <script>
+        let anoAtual = Number(window.prompt("Digite o ano atual"))
+        let nascimento = Number(window.prompt("Digite o ano em que nasceu"))
+        let idade = anoAtual-nascimento
+        let saida = document.querySelector('section#saida')
+        saida.innerHTML = `Idade : ${idade}`
+    </script>
+</body>
+</html>

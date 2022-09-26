@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área de um triângulo</title>
+</head>
+<body>
+    <section id="entrada">
+        <form action="#" method="get">
+            <label for="base">Base:</label>
+            <input type="text" name="base" id="base">
+            <br>
+            <label for="altura">Altura:</label>
+            <input type="text" name="altura" id="altura">
+            <br>
+            <input type="submit" value="Calcular" formaction="javascript:calcular()">
+        </form>
+    </section>
+    <section id="saida">
+        <p>Base será exibida aqui</p>
+    </section>
+    <script>
+        let saida = document.querySelector('section#saida')
+        function calcular() {
+            let base = Number(document.getElementById('base').value)
+            let altura = Number(document.getElementById('altura').value)
+            let area = (base*altura)/2
+            saida.innerHTML = `Valor da área: ${area}`
+        }
+    </script>
+</body>
+</html>

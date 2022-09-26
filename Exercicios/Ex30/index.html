@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body>
+    <section id="entrada">
+        <form action="#" method="get">
+            <label for="numero1">Número 1:</label>
+            <input type="text" name="numero1" id="numero1">
+            <br>
+            <label for="numero2">Número 2:</label>
+            <input type="text" name="numero2" id="numero2">
+            <br>
+            <input type="button" value="Calcular" onclick="calcular()">
+        </form>
+    </section>
+    <section id="saida">
+        <p>Resultado será dado aqui</p>
+    </section>
+    <script>
+        let saida = document.getElementById('saida')
+        let numero1 = Number(document.getElementById('numero1').value)
+        let numero2 = Number(document.getElementById('numero2').value)
+       
+        function calcular() {
+            let operacao = window.prompt("Digite o operação que deseja")
+            switch (operacao.toUpperCase()) {
+                case 'SOMA':
+                    let soma = numero1+numero2
+                    saida.innerHTML = `${soma}`
+                    break;
+                case 'SUBTRACAO':
+                    let subtracao = numero1-numero2
+                    saida.innerHTML = `${subtracao}`
+                    break;
+                case 'MULTIPLICAO':
+                    let multiplicao = numero1*numero2
+                    saida.innerHTML = `${multiplicao}`
+                    break;
+                case 'DIVISAO':
+                    let divisao = numero1/numero2
+                    saida.innerHTML = `${divisao}`
+                    break;
+                default:
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>
