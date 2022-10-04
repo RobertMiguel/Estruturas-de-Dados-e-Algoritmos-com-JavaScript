@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>oi nome</title>
+</head>
+<body>
+    <input type="button" value="clique" onclick="calular()">
+    <section id="saida"></section>
+    <script>
+        let saida = document.querySelector('section#saida')
+        function calular() {
+            let nome = window.prompt("Qual seu nome?")
+            window.alert(`Olá, ${nome}`)
+        }
+    </script>
+</body>
+</html>
