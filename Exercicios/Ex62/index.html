@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="clique" onclick="calular()">
+    <section id="saida"></section>
+    <script>
+        let saida = document.querySelector('section#saida')
+        function calular() {
+            let anoAtual = Number(window.prompt("Ano atual?"))
+            let anos = Number(window.prompt("Digite sua idade"))
+            let nasceu = anoAtual-nasceu
+            saida.innerHTML = `${nasceu}`
+        }
+    </script>
+</body>
+</html>

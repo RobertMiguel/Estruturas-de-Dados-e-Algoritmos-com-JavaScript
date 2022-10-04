@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lados</title>
+</head>
+<body>
+    <input type="button" value="clique" onclick="calular()">
+    <section id="saida"></section>
+    <script>
+        let saida = document.querySelector('section#saida')
+        function calular() {
+            let nL = Number(window.prompt("Lados"))
+            let nd = nL*(nL-3)/2
+            saida.innerHTML = `${nd}`
+        }
+    </script>
+</body>
+</html>
