@@ -7,6 +7,21 @@
     <title>Document</title>
 </head>
 <body>
+    <section id="entrada">
+        <form action="" method="get">
+            <label for="pF">Preço da Fábrica:</label>
+            <input type="number" id="pF">
+            <br>
+            <label for="pL">Percentual de lucro do distribuidor:</label>
+            <input type="number" id="pL">
+            <br>
+            <label for="pI">Percentual de impostos:</label>
+            <input type="number" id="pI">
+            <br>
+            <input type="button" value="Clique" onclick="punheta()">
+        </form>
+    </section>
+    <section id="saida"></section>
     <script>
         /*O custo ao consumidor de um carro novo é a soma do preço de fábrica com o percentual de lucro do
 distribuidor e dos impostos aplicados ao preço de fábrica. Faça um programa que receba o preço de fá-
@@ -14,6 +29,16 @@ brica de um veículo, o percentual de lucro do distribuidor e o percentual de im
 a) o valor correspondente ao lucro do distribuidor;
 b) o valor correspondente aos impostos;
 c) o preço final do veículo.*/
+    function punheta() {
+        let saida = document.querySelector('section#saida')
+        let pF = Number(document.getElementById('pF').value)
+        let pL = Number(document.getElementById('pL').value)
+        let pI = Number(document.getElementById('pI').value)
+        let vl_lD = pF * pL / 100
+        let vl_cI = pF * pI / 100
+        let p_F = vl_lD+vl_cI+pF
+        saida.innerHTML = `<p>Preço final do carro ${p_F}</p>`
+    }
     </script>
 </body>
 </html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funcão seno</title>
+</head>
+<body>
+    <section id="entrada">
+        <form action="" method="get">
+            <label for="ang">Angulo:</label>
+            <input type="number" name="" id="ang">
+            <br>
+            <label for="alt">Altura:</label>
+            <input type="number" name="" id="alt">
+            <input type="button" value="Clique" onclick="calcular()">
+        </form>
+    </section>
+    <section id="saida"></section>
+    <script>
+        let saida = document.querySelector('section#saida')
+        function calcular() {
+            let alt = Number(document.getElementById('alt').value)
+            let ang = Number(document.getElementById('ang').value)
+            let radiano = ang * Math.PI / 180
+            let escada = alt / Math.sin(radiano)
+            saida.innerHTML = `<p>Altura da escada é de ${escada}</p>`
+        }
+    </script>
+</body>
+</html>

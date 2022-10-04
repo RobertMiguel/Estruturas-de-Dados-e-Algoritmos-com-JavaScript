@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CPMF</title>
+</head>
+<body>
+    <section id="entrada">
+        <form action="" method="get">
+            <label for="salario">Salário:</label>
+            <input type="number" name="" id="salario">
+            <br>
+            <label for="cheque1">Cheque 1:</label>
+            <input type="number" name="" id="cheque1">
+            <br>
+            <label for="cheque2">Cheque 2:</label>
+            <input type="number" name="" id="cheque2">
+            <br>
+            <input type="button" value="Clique" onclick="calcular()">
+        </form>
+    </section>
+    <section id="saida"></section>
+    <script>
+        let saida = document.querySelector('section#saida')
+        let cheque1 = Number(document.getElementById('cheque1').value)
+        let cheque2 = Number(document.getElementById('cheque2').value)
+        let salario = Number(document.getElementById('salario').value)
+        function calcular() {
+            let cpmf1 = cheque1 * 0.38 / 100
+            let cpmf2 = cheque2 * 0.38 / 100
+            let saldo = salario - cheque1 - cheque1 - cpmf1 - cpmf2
+            saida.innerHTML += `<p>O saldo é de ${Math.trunc(saldo)}</p>`
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiolate</title>
+</head>
+<body>
+    <section id="entrada">
+        <form action="" method="get">
+            <label for="vl_SM">Valor do salário mínimo:</label>
+            <input type="number" name="" id="vl_SM">
+            <br>
+            <label for="vl_QC">Valor de Quiolates consumidos:</label>
+            <input type="number" name="" id="vl_QC">
+            <input type="button" value="clique" onclick="calcular()">
+        </form>
+    </section>
+    <section id="saida"></section>
+    <script>
+        function calcular() {
+        let saida = document.querySelector('section#saida')
+        let vl_SM = Number(document.getElementById('vl_SM').value)
+        let vl_QC = Number(document.getElementById('vl_QC').value)
+        let vl_CQ = vl_SM / 5
+        let vl_P = vl_CQ * vl_QC
+        let vl_D = vl_P - 0.15
+        saida.innerHTML = `<p>Saida é de ${vl_D}</p>`
+        }
+    </script>
+</body>
+</html>

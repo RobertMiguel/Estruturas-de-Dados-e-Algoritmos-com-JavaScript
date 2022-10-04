@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Degraus</title>
+</head>
+<body>
+    <section id="entrada">
+        <form action="" method="get">
+            <label for="altura">Altura</label>
+            <input type="number" name="" id="altura">
+            <br>
+            <label for="aDegrau">Altura de cada degrau</label>
+            <input type="number" name="" id="aDegrau">
+            <input type="button" value="Clique" onclick="calcular()">
+        </form>
+    </section>
+    <section id="saida"></section>
+    <script>
+        function calcular() {
+            let saida = document.querySelector('section#saida')
+            let altura = Number(document.getElementById('altura').value)
+            let aDegrau = Number(document.getElementById('aDegrau').value)
+            let qDegrau = altura / aDegrau
+            saida.innerHTML = `Quantidade de degraus é ${qDegrau}`
+        }
+    </script>
+</body>
+</html>

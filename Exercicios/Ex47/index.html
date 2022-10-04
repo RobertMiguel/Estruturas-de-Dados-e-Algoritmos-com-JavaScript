@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Converter</title>
+</head>
+<body>
+    <section id="entrada">
+        <form action="" method="get">
+            <label for="n">Número</label>
+            <input type="number" name="" id="n">
+            <input type="button" value="Clique" onclick="converter()">
+        </form>
+    </section>
+    <section id="saida"></section>
+    <script>
+        function converter() {
+        let saida = document.querySelector('section#saida')
+        let n = Number(document.getElementById('n').value)
+        let nI = Math.trunc(n)
+        let nF = n - nI
+        let nA = Math.round(n)
+        saida.innerHTML = `<p>Inteiro : ${nI}, Fracionario ${nF}, Arrendodameno : ${nA}</p>`
+        }
+    </script>
+</body>
+</html>
