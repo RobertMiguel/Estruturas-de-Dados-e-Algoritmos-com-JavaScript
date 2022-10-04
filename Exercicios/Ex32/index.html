@@ -4,9 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Diametro de uma circunferencia de um circulo</title>
 </head>
 <body>
-    
+    <section id="entrada">
+        <form action="" method="get">
+            <label for="raio">Raio</label>
+            <input type="number" name="raio" id="raio">
+            <input type="button" value="Calcular" onclick="circ()">
+        </form>
+    </section>
+    <section id="saida"></section>
+    <script>
+        //C = 2 · π · r
+        function circ() {
+            let saida = document.querySelector('section#saida')
+            let raio = Number(document.getElementById('raio').value)
+            let circ = 2 * Math.PI * raio
+            saida.innerHTML = `<p>Circunferencia é ${circ}</p>`
+        }
+    </script>
 </body>
 </html>

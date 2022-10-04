@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de crescimento demográfico mundial</title>
+</head>
+<body>
+    <section id="entrada">
+        <form action="" method="get">
+            <label for="nascimentos">Nascimentos</label>
+            <input type="number" id="nascimentos">
+            <br>
+            <label for="mortes">Mortes</label>
+            <input type="number" id="mortes">
+            <br>
+            <label for="saldoMigratorio">Saldo migratório</label>
+            <input type="number" id="saldoMigratorio">
+            <br>
+            <label for="populacaoAtual">População Atual</label>
+            <input type="number" id="populacaoAtual">
+            <br>
+            <input type="button" value="calcular" onclick="calcular()">
+        </form>
+    </section>
+    <section id="saida">
+    </section>
+    <script>
+        //nascimentos – mortes + saldo migratório x 100 / população total = Total em %
+        function calcular() {
+            let saida = document.querySelector('section#saida')
+            let nascimentos = Number(document.getElementById('nascimentos').value)
+            let mortes = Number(document.getElementById('mortes').value)
+            let saldoMigratorio = Number(document.getElementById('saldoMigratorio').value)
+            let populacaoAtual = Number(document.getElementById('populacaoAtual').value)
+            let total = nascimentos - mortes + saldoMigratorio * 100 / populacaoAtual
+            saida.innerHTML = `<p>Porcentagem de crescimento demográfico${total}</p>`
+        }
+    </script>
+</body>
+</html>
