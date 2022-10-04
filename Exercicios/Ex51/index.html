@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mult</title>
+</head>
+<body>
+    <input type="button" value="clique" onclick="mult()">
+    <section id="saida"></section>
+    <script>
+        function mult() {
+            let saida = document.querySelector('section#saida')
+            let n1 = Number(window.prompt("Digite o 1° número"))
+            let n2 = Number(window.prompt("Digite o 2° número"))
+            let n3 = Number(window.prompt("Digite o 3° número"))
+            let mult = n1*n2*n3
+            saida.innerHTML = `${mult}`
+        }
+    </script>
+</body>
+</html>

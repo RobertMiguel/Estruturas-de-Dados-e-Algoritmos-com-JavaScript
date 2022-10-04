@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>valor das vendas</title>
+</head>
+<body>
+    <input type="button" value="clique" onclick="calcular()">
+    <section id="saida"></section>
+    <script>
+        function calcular() {
+            let saida = document.querySelector('section#saida')
+            let s = Number(window.prompt("Digite o salario"))
+            let v = Number(window.prompt("Digite o número de vendas"))
+            let c = (v*0.04)+s
+            saida.innerHTML = `${c}`
+        }
+    </script>
+</body>
+</html>

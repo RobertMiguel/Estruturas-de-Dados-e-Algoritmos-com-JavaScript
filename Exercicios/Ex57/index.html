@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gramas</title>
+</head>
+<body>
+    <input type="button" value="clique" onclick="gramas()">
+    <section id="saida"></section>
+    <script>
+        function gramas() {
+            let k = Number(window.prompt("Digite um valor em kilos"))
+            let g = k / 1000
+            let saida = document.querySelector('section#saida')
+            saida.innerHTML = `${g}`
+        }
+    </script>
+</body>
+</html>

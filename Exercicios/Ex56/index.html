@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>peso</title>
+</head>
+<body>
+    <input type="button" value="Clique" onclick="peso()">
+    <section id="saida"></section>
+    <script>
+        function peso() {
+            let saida = document.querySelector('section#saida')
+            let peso = Number(window.prompt("Digite o peso"))
+            let p15 = (peso*0.15) - peso
+            let p20 = (peso*0.20) - peso
+            saida.innerHTML = `${p15} e ${p20}`
+        }
+    </script>
+</body>
+</html>
