@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sei lá</title>
+</head>
+    <section id="entrada">
+        <form action="" method="get">
+            <label for="sB">Salário base:</label>
+            <input type="number" id="sB">
+            <br>
+            <input type="button" value="Clique" onclick="calcular()">
+        </form>
+    </section>
+    <section id="saida"></section>
+<body>
+    <script>
+        /*Faça um programa que receba o salário base de um funcionário, calcule e mostre o salário a receber,
+    sabendo-se que o funcionário tem gratificação de 5% sobre o salário base e paga imposto de 7% tam-
+    bém sobre o salário base.*/
+        function calcular() {
+            let saida = document.querySelector('section#saida')
+            let sB = Number(document.getElementById('sB').value)
+            let i1 = (sB*0.05)
+            let i2 = (sB*0.07)
+            let sA = (sB+i1)-i2 
+            saida.innerHTML = `<p>Salário : ${sA}</p>`
+        }
+    </script>
+</body>
+</html>

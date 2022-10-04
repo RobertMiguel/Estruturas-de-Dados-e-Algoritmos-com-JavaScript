@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>conversões</title>
+</head>
+<body>
+    <section id="entrada">
+        <form action="" method="get">
+            <label for="mP">Medida em pés:</label>
+            <input type="number" name="" id="mP">
+            <input type="button" value="Clique" onclick="conversao()">
+        </form>
+    </section>
+    <section id="saida"></section>
+    <script>
+        /*Sabe-se que:
+        pé = 12 polegadas
+        1 jarda = 3 pés
+        1 milha = 1,760 jarda
+        Faça um programa que receba uma medida em pés, faça as conversões a seguir e mostre os resultados.
+        a) polegadas;
+        b) jardas;
+        c) milhas.*/
+        function conversao() {
+            let saida = document.querySelector('section#saida')
+            let mP = Number(document.getElementById('mP').value)
+            let p = mP *12
+            let j = 3/mP
+            let m = j / 1.760
+            saida.innerHTML = `<p>Polegadas : ${p}, jardas : ${j}, milhas : ${m}</p>`
+        }
+    </script>
+</body>
+</html>

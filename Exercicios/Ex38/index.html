@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=], initial-scale=1.0">
+    <title>Salário a receber</title>
+</head>
+<body>
+    <section id="entrada">
+        <form action="" method="get">
+            <label for="nHT">Número de horas trabalhadas:</label>
+            <input type="number" id="nHT">
+            <br>
+            <label for="vlSM">Valor salário mínimo:</label>
+            <input type="number" id="vlSM">
+            <br>
+            <input type="button" value="Clique" onclick="calcular()">
+        </form>
+    </section>
+    <section id="saida"></section>
+    <script>
+        /*GET - número de horas trabalhadas e o valor do salário mínimo, calcule e
+        mostre o salário a receber*/
+        /*FUNCTION - a hora trabalhada vale a metade do salário mínimo.
+        b) o salário bruto equivale ao número de horas trabalhadas multiplicado pelo valor da hora trabalhada.
+        c) o imposto equivale a 3% do salário bruto.
+        d) o salário a receber equivale ao salário bruto menos o imposto.*/
+        function calcular() {
+            let saida = document.querySelector('section#saida')
+            let nHT = Number(document.getElementById('nHT').value)
+            let vlSM = Number(document.getElementById('vlSM').value)
+            let sB = nHT*vlSM
+            let imposto = sB*0.03
+            let sR = sB-imposto
+            saida.innerHTML = `<p>Salário: ${sR}</p>`
+        }
+    </script>
+</body>
+</html>

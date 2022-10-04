@@ -4,9 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Salario de um funcionario</title>
 </head>
 <body>
-    
+    <section id="entrada">
+        <form action="" method="get">
+            <label for="salario">Salário:</label>
+            <input type="number" name="salario" id="salario">
+            <br>
+            <input type="button" value="Clique" onclick="novoSalario()">
+        </form>
+    </section>
+    <section id="saida"></section>
+    <script>
+        function novoSalario() {
+        let saida = document.querySelector('section#saida')
+        let salario = Number(document.getElementById('salario').value)
+        let novoSalario = (salario*0.25)+salario
+        saida.innerHTML = `Novo salário : ${novoSalario}`
+        }
+    </script>
 </body>
 </html>
