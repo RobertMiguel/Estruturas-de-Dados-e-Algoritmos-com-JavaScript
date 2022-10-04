@@ -4,14 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>conversao</title>
+    <title>Custo</title>
 </head>
 <body>
     <section id="entrada">
         <form action="" method="get">
-            <label for="horas">Horas:</label>
-            <input type="number" name="" id="horas">
+            <label for="custo">Custo:</label>
+            <input type="number" name="" id="custo">
             <br>
+            <label for="precoConvite">Preço do convite:</label>
+            <input type="number" name="" id="precoConvite">
             <input type="button" value="Clique" onclick="calcular()">
         </form>
     </section>
@@ -19,11 +21,10 @@
     <script>
         let saida = document.querySelector('section#saida')
         function calcular() {
-            let horas = Number(document.getElementById('horas').value)
-            let h = Math.trunc(horas)
-            let m = horas - h
-            let conversao = (h * 60) + (m * 100)
-            saida.innerHTML = `<p>Conversão é ${conversao}</p>`           
+            let custo = Number(document.getElementById('custo').value)
+            let precoConvite = Number(document.getElementById('precoConvite').value)
+            let qtd = custo/precoConvite
+            saida.innerHTML = `<p>Precisa pelo menos de ${qtd} convites</p>`
         }
     </script>
 </body>
