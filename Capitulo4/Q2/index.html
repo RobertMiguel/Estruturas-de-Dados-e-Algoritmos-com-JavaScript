@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q2</title>
+</head>
+<body>
+    <section id="entrada">
+        <form action="" method="get">
+            <label for="salario">Salario</label>
+            <input type="number" id="salario">
+            <input type="button" value="Clique" onclick="calcular()">
+        </form>
+    </section>
+    <section id="saida"></section>
+    <script>
+        function calcular() {
+            let saida = document.getElementById('saida')
+            let salario = Number(document.getElementById("salario").value)
+            let imposto5 = 0.05
+            let imposto10 = 0.10
+            let imposto15 = 0.15
+            let salarioAtual
+            if(salario < 500){
+                salarioAtual = salario*imposto5
+                saida.innerHTML += `<p>Salário atual é de R$ ${salarioAtual}</p>`
+            }
+            else if((salario >= 500) && (salario < 850)){
+                salarioAtual = salario*imposto10
+                saida.innerHTML += `<p>Salário atual é de R$ ${salarioAtual}</p>`
+            }
+            else if(salario >= 850){
+                salarioAtual = salario*imposto15
+                saida.innerHTML += `<p>Salário atual é de R$ ${salarioAtual}</p>`
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q5</title>
+</head>
+<body>
+    <input type="button" value="Clique" onclick="horario()">
+    <section id="saida"></section>
+    <script>
+        function horario(){
+            let saida = document.querySelector('section#saida')
+            let data = prompt('Digite um tipo de data (Ex:horario)')
+            let agora = new Date()
+            switch (data.toUpperCase()) {
+                case 'DIA':
+                    let dia = agora.getDate()
+                    saida.innerHTML += `
+                    <p>Dia : ${dia}</p>
+                    `
+                    break;
+                case 'MINUTOS':
+                    let minutos = agora.getMinutes()
+                    saida.innerHTML += `
+                    <p>Minutos : ${minutos}</p>
+                    ` 
+                    break;
+                case 'HORA':
+                    let hora = agora.getHours()
+                    saida.innerHTML += `
+                    <p>Hora : ${hora}</p>
+                    `
+                    break;
+                case 'ANO':
+                    let ano = agora.getFullYear()
+                    saida.innerHTML += `
+                    <p/>Ano : ${ano}<p>
+                    `
+                    break;  
+                default:
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q4</title>
+</head>
+<body>
+    <section id="entrada">
+        <label for="numero">Mês</label>
+        <input type="number" id="number">
+        <input type="button" value="Clique" onclick="mes()">
+    </section>
+    <section id="saida"></section>
+    <script>
+        function mes() {
+            let saida = document.querySelector('section#saida')
+            let number = Number(document.getElementById('number').value)
+            if (number === 1) {
+                saida.innerHTML += `
+                <p>Janeiro</p>
+                `
+            }
+            else if(number === 2){
+                saida.innerHTML += `
+                <p>Fevereiro</p>
+                `
+            }
+            else if(number === 3){
+                saida.innerHTML += `
+                <p>Março</p>
+                `
+            }
+            else if(number === 4){
+                saida.innerHTML += `
+                <p>Abril</p>
+                `
+            }
+            else if(number === 5){
+                saida.innerHTML += `
+                <p>Maio</p>
+                `
+            }
+            else if (number === 6) {
+                saida.innerHTML += `
+                <p>Junho</p>
+                `   
+            }
+            else if(number === 7){
+                saida.innerHTML += `
+                <p>Julho</p>
+                `
+            }
+            else if(number === 8){
+                saida.innerHTML += `
+                <p>Agosto</p>
+                `
+            }
+            else if(number === 9){
+                saida.innerHTML += `
+                <p>Setembro</p>
+                `
+            }
+            else if(number === 10){
+                saida.innerHTML += `
+                <p>Outubro</p>
+                `
+            }
+            else if(number === 11){
+                saida.innerHTML += `
+                <p>Novembro</p>
+                `
+            }
+            else if(number === 12){
+                saida.innerHTML += `
+                <p>Dezembro</p>
+                `
+            }
+            else{
+                saida.innerHTML += `
+                <p>Número acima de 11 é invalido<p>
+                `
+            }
+        }
+    </script>
+</body>
+</html>

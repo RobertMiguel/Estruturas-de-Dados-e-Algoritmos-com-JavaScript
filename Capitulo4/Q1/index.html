@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q1</title>
+</head>
+<body>
+    <section id="entrada">
+        <form action="" method="get">
+            <label for="tL">Trabalho de laboratório:</label>
+            <input type="number" id="tL">
+            <br>
+            <label for="aS">Avaliação Semestral:</label>
+            <input type="number" id="aS">
+            <br>
+            <label for="eF">Exame Final:</label>
+            <input type="number" id="eF">
+            <input type="button" value="Clique" onclick="media()">
+        </form>
+    </section>
+    <section id="saida"></section>
+    <script>
+        function media() {
+            let saida = document.getElementById("saida")
+            let tL = Number(document.getElementById("tL").value)
+            let aS = Number(document.getElementById("aS").value)
+            let eF = Number(document.getElementById("eF").value)
+
+            let media = (tL+aS+eF)/3
+
+            if((media >= 8) && (media <= 10)){
+                saida.innerHTML = `<p>Sua média é ${media} então foi A</p>`
+            }
+            else if((media >= 7) && (media < 8)){
+                saida.innerHTML = `<p>Sua média é ${media} então foi B</p>`
+            }
+            else if((media >=6) && (media < 7)){
+                saida.innerHTML = `<p>Sua média é ${media} então foi C</p>`
+            }
+            else if((media >= 5) && (media > 6)){
+                saida.innerHTML = `<p>Sua média é ${media} então foi D</p>`
+            }
+            else if((media >= 0) && (media < 5)){
+                saida.innerHTML = `<p>Sua média é ${media} então foi E</p>`
+            }
+        }
+    </script>
+</body>
+</html>
