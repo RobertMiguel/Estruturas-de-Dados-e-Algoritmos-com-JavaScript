@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cargo</title>
+</head>
+<body>
+    <section id="entrada">
+            <input type="button" value="Clique" onclick="cargo()">
+    </section>
+    <section id="saida"></section>
+    <script>
+        function cargo() {
+            let saida = document.querySelector('section#saida')
+            let cargo = prompt("Digite um cargo")
+            let percentual
+            switch (cargo.toLowerCase()) {
+                case 'escriturario':
+                    percentual = 0.50
+                    saida.innerHTML = `<p>${percentual}</p>`
+                    break;
+                case 'secretario':
+                    percentual = 0.35
+                    saida.innerHTML = `<p>${percentual}</p>`
+                    break;
+                case 'caixa':
+                    percentual = 0.20
+                    saida.innerHTML = `<p>${percentual}</p>`
+                    break;
+                case 'gerente':
+                    percentual = 0.10
+                    saida.innerHTML = `<p>${percentual}</p>`
+                    break;
+                case 'diretor':
+                    percentual = "Não tem aumento"
+                    saida.innerHTML = `<p>${percentual}</p>`
+                    break;
+                default:
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>
