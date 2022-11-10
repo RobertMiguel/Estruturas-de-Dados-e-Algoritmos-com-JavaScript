@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q11</title>
+</head>
+<body>
+    <section id="entrada">
+        <form action="" method="get">
+            <label for="valorX">Digite um valor X</label>
+            <input type="text" id="valorX">
+            <label for="valorY">Digite um valor Y</label>
+            <input type="text" id="valorY">
+            <label for="valoZ">Digite um valor Z</label>
+            <input type="text" id="valorZ">
+            <input type="button" value="Clique" onclick="triangulo()">
+        </form>
+    </section>
+    <section id="saida"></section>
+    <script>
+        function triangulo() {
+            let saida = document.getElementById("saida")
+            let valorX = Number(document.getElementById("valorX").value)
+            let valorY = Number(document.getElementById("valorY").value)
+            let valorZ = Number(document.getElementById("valorZ").value)
+
+            if((valorX == valorY) && (valorY == valorZ) && (valorZ == valorX)){
+                saida.innerHTML += `
+                <p>Esse triangulo é equilatero, pois todos os lados são iguais</p>
+                `
+            }
+            else if((valorX == valorY) || (valorY == valorZ) || (valorZ == valorX)){
+                saida.innerHTML += `
+                <p>Esse triangulo é isósceles, pois possui dois valores iguais</p>
+                `
+            }
+            else if((valorX != valorY) && (valorY != valorZ) && (valorX != valorZ)){
+                saida.innerHTML += `
+                <p>Esse triangulo é escaleno, pois possui todos os lados diferentes</p>
+                `
+            }
+        }
+    </script>
+</body>
+</html>

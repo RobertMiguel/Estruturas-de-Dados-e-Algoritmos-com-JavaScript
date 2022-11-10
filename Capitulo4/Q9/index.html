@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q9</title>
+</head>
+<body>
+    <section id="entrada">
+        <form action="" method="get">
+            <label for="variavelA">Digite o valor da variavel A</label>
+            <input type="text" id="variavelA">
+            <label for="variavelB">Digite o valor da variavel B</label>
+            <input type="text" id="variavelB">
+            <label for="variavelC">Digite o valor da variavel C</label>
+            <input type="text" id="variavelC">
+            <input type="button" value="Calcular" onclick="calcularEquacao2()">
+        </form>
+    </section>
+    <section id="saida"></section>
+    <script>
+        function calcularEquacao2() {
+            let saida = document.querySelector("section#saida")
+            let variavelA = Number(document.getElementById("variavelA").value)
+            let variavelB = Number(document.getElementById("variavelB").value)
+            let variavelC = Number(document.getElementById("variavelC").value)
+            let delta,x1,x2
+            if (variavelA == 0) {
+                saida.innerHTML += `
+                <p>A variavel digita foi ${Math.round(variavelA)}, digite uma variavel diferente de zero</p>
+                `
+            }
+            else {
+                delta = (Math.pow(variavelB, variavelB)) - (4 * variavelA * variavelC)
+                if(delta < 0){
+                    saida.innerHTML += `
+                    <p>O valor de delta foi ${Math.round(delta)}, o valor tem que ser menor que 0, pois não existe raiz real</p>
+                    `
+                }
+                else if(delta == 0){
+                    x1 = ((-variavelB) / (2 * variavelA))
+                    saida.innerHTML += `
+                    <p>O valor de delta foi ${Math.round(delta)}, existe valor real para ela, o valor é ${Math.round(x1)}
+                    `
+                }
+                else if(delta > 0){
+                    x1 = ((-variavelB + Math.sqrt(delta)) / (2 * variavelA))
+                    x2 = ((-variavelB - Math.sqrt(delta)) / (2 * variavelA))
+                    saida.innerHTML += `
+                    <p>O valor de delta foi ${Math.round(delta)}, então existe duas raizes, primeiro valor ${Math.round(x1)} e segundo valor foi ${Math.round(x2)}</p>
+                    `
+                }
+            }
+        }
+    </script>
+</body>
+</html>

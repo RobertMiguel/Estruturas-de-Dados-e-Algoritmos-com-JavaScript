@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q13</title>
+</head>
+<body>
+    <section id="entrada">
+        <form action="" method="get">
+            <label for="peso">Peso</label>
+            <input type="text" id="peso">
+            <label for="altura">Altura</label>
+            <input type="text" id="altura">
+            <input type="button" value="Clique" onblur="classificacao()"> 
+        </form>
+    </section id="saida">
+    <section></section>
+    <script>
+        function classificacao(){
+            let saida = document.getElementById("saida")
+            let altura = Number(document.getElementById("altura").value)
+            let peso = Number(document.getElementById("peso").value)
+            
+            if(peso > 60){
+                saida.innerHTML = `
+                <p>A</p>
+                `
+            }
+            else if(peso >= 60 && peso < 90){
+                saida.innerHTML = `
+                <p>D</p>
+                `
+            }
+            else if(peso > 90){
+                saida.innerHTML = `
+                <p>G</p>
+                `	
+            }
+        }
+    </script>
+</body>
+</html>

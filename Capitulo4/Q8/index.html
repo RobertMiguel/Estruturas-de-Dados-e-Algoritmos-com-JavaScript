@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q9</title>
+</head>
+<body>
+    <section id="entrada">
+        <form action="" method="get">
+            <label for="">Venda Mensal Média</label>
+            <input type="text" name="" id="vendaMensalMedia">
+            <label for="">Preço Atual do produto</label>
+            <input type="text" name="" id="precoAtualProduto" onblur="novoPreco()">
+        </form>
+    </section>
+    <section id="saida"></section>
+    <script>
+        function novoPreco() {
+            let saida = document.getElementById("saida")
+            let vendaMensalMedia = Number(document.getElementById("vendaMensalMedia").value)
+            let precoAtualProduto = Number(document.getElementById("precoAtualProduto").value)
+            let porcentagemAumento10 = 0.10
+            let porcentagemAumento15 = 0.15
+            let porcentagemDiminui20 = 0.20
+            let novoPreco
+            if(vendaMensalMedia < 500 & precoAtualProduto < 30){
+                novoPreco = (porcentagemAumento10*precoAtualProduto) + precoAtualProduto
+                saida.innerHTML = `<p>Novo preço do produto é de R$: ${novoPreco}, venda mensal média foi menos de R$ 500 e o preco atual foi menos de 30 reais</p>`
+
+            }
+            else if(((vendaMensalMedia >= 500) & (vendaMensalMedia < 1200)) | ((precoAtualProduto >= 30) & (precoAtualProduto < 80))){
+                novoPreco = (porcentagemAumento15 * precoAtualProduto) + precoAtualProduto
+                saida.innerHTML = `<p>Novo preço do produto é de R$: ${novoPreco}, venda mensal média foi de R$ 500 até 1200 e preço atual foi de 30 até 80 reais</p>`
+            }
+            else if(vendaMensalMedia >= 1200 | precoAtualProduto >= 80){
+                novoPreco = (porcentagemDiminui20 * precoAtualProduto) + precoAtualProduto
+                saida.innerHTML = `<p>Novo preço do produto é de R${novoPreco}, venda mensal média de até R$ 1200 e preco atual do produto foi até 80 reais`
+            }
+        }
+    </script>
+</body>
+</html>
